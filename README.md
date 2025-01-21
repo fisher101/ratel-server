@@ -1,4 +1,4 @@
-# Ratel-Online--
+# Ratel-Online
 [![Go Reference](https://pkg.go.dev/badge/github.com/ratel-online/server.svg)](https://pkg.go.dev/github.com/ratel-online/server)
 
 命令行在线多人棋牌游戏！支持斗地主，跑得快,UNO,麻将等模式！
