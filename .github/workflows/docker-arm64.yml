@@ -28,11 +28,10 @@ jobs:
           context: .
           platforms: linux/arm64
           push: true
-          tags: your-dockerhub-username/your-image-name:latest
+          tags: fisher101/ratel-server:latest
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
+          DOCKER_USERNAME: fisher101
+          DOCKER_PASSWORD: 24022402fjy
 
       - name: Clean up
         run: docker system prune -af
