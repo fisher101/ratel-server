@@ -27,8 +27,12 @@ jobs:
         with:
           context: .
           platforms: linux/arm64
-          push: true  # 如果你想将镜像推送至 Docker Hub 或其他容器注册中心
-          tags: your-dockerhub-username/your-image-name:latest # 修改为你的 Docker Hub 用户名和镜像名
+          push: true
+          tags: your-dockerhub-username/your-image-name:latest
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
 
       - name: Clean up
         run: docker system prune -af
