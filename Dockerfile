@@ -26,8 +26,7 @@ WORKDIR /root/
 COPY --from=builder /app/server .
 
 # 暴露端口（根据项目需求修改）
-EXPOSE 9998
-EXPOSE 9999
+EXPOSE 9998,9999
 
 # 运行应用程序
 CMD ["./server"]
