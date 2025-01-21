@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # 构建项目
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH go build -o server .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o server-linux .
 
 # 使用轻量级的 Alpine 镜像作为运行环境
 FROM alpine:latest
