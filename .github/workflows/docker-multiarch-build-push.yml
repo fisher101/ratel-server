@@ -32,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/amd64,linux/arm64  # 支持 AMD64 和 ARM64
+          platforms: linux/arm64  # 支持 AMD64 和 ARM64 linux/amd64,
           push: true
           tags: fisher101/ratel-server:latest
