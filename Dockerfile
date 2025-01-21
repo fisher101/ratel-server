@@ -1,5 +1,5 @@
 # 使用官方的 Go 镜像作为构建环境
-FROM golang:1.20-alpine AS builder
+FROM --platform=$BUILDPLATFORM golang:1.20-alpine AS builder
 
 # 设置工作目录
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # 构建项目
-RUN CGO_ENABLED=0 GOOS=linux go build -o server .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH go build -o server .
 
 # 使用轻量级的 Alpine 镜像作为运行环境
 FROM alpine:latest
@@ -26,7 +26,7 @@ WORKDIR /root/
 COPY --from=builder /app/server .
 
 # 暴露端口（根据项目需求修改）
-EXPOSE 8080
+EXPOSE 1024
 
 # 运行应用程序
 CMD ["./server"]
