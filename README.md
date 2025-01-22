@@ -7,15 +7,16 @@
 docker pull fisher101/ratel-server:latest
 
 ## Compose安装
-`services:`
-` server:`
-`  image: fisher101/ratel-server:latest`
+```
+services:
+ server:
+  image: fisher101/ratel-server:latest`
   restart: always
   container_name: ratelserver
   ports:
    - 9998:9998
    - 9999:9999
-`
+```
 
 ## 客户端
 - 浏览器在线：[http://rtol.isnico.com/](http://rtol.isnico.com/)
