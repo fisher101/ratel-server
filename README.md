@@ -1,10 +1,22 @@
 # Ratel-Online——docker_arm64版本
 [![Go Reference](https://pkg.go.dev/badge/github.com/ratel-online/server.svg)](https://pkg.go.dev/github.com/ratel-online/server)
 
-## 安装
+命令行在线多人棋牌游戏！支持斗地主，跑得快,UNO,麻将等模式！
+
+## 提取镜像
 docker pull fisher101/ratel-server:latest
 
-命令行在线多人棋牌游戏！支持斗地主，跑得快,UNO,麻将等模式！
+## Compose安装
+services:
+ server:
+  image: fisher101/ratel-server:latest
+  restart: always
+  container_name: ratelserver
+  ports:
+   - 9998:9998
+   - 9999:9999
+
+
 ## 客户端
 - 浏览器在线：[http://rtol.isnico.com/](http://rtol.isnico.com/)
 - 客户端下载：[https://github.com/ratel-online/client/releases](https://github.com/ratel-online/client/releases)
