@@ -7,9 +7,9 @@
 docker pull fisher101/ratel-server:latest
 
 ## Compose安装
-`services:
- server:
-  image: fisher101/ratel-server:latest
+`services:`
+` server:`
+`  image: fisher101/ratel-server:latest`
   restart: always
   container_name: ratelserver
   ports:
