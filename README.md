@@ -1,5 +1,8 @@
-# Ratel-Online--
+# Ratel-Online——docker_arm64版本
 [![Go Reference](https://pkg.go.dev/badge/github.com/ratel-online/server.svg)](https://pkg.go.dev/github.com/ratel-online/server)
+
+## 安装
+docker pull fisher101/ratel-server:latest
 
 命令行在线多人棋牌游戏！支持斗地主，跑得快,UNO,麻将等模式！
 ## 客户端
