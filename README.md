@@ -4,7 +4,9 @@
 命令行在线多人棋牌游戏！支持斗地主，跑得快,UNO,麻将等模式！
 
 ## 提取镜像
+```
 docker pull fisher101/ratel-server:latest
+```
 
 ## Compose安装
 ```
