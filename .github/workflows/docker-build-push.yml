@@ -31,4 +31,4 @@ jobs:
           platforms: linux/arm64  # 指定 ARM64 架构
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/flex-poker:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/ratel-server:latest
